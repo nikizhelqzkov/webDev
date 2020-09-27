@@ -21,7 +21,7 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="Navbar">
-        <ul class="navbar-nav ml-auto">
+        <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
             <a class="nav-link" href="#"><span class="fa fa-home fa-lg"></span>Home</a>
           </li>
@@ -35,9 +35,50 @@
             <a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span>Contacts</a>
           </li>
         </ul>
+        <span class="navbar-text">
+          <a data-toggle="modal" data-target="#loginModal">
+            <span class="fa fa-sign-in"></span> Login</a>
+        </span>
       </div>
     </div>
   </nav>
+  <div id="loginModal" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-lg" role="content">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Login </h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-row">
+              <div class="form-group col-sm-4">
+                <label class="sr-only" for="exampleInputEmail3">Email address</label>
+                <input type="email" class="form-control form-control-sm mr-1" id="exampleInputEmail3"
+                  placeholder="Enter email">
+              </div>
+              <div class="form-group col-sm-4">
+                <label class="sr-only" for="exampleInputPassword3">Password</label>
+                <input type="password" class="form-control form-control-sm mr-1" id="exampleInputPassword3"
+                  placeholder="Password">
+              </div>
+              <div class="col-sm-auto">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox">
+                  <label class="form-check-label"> Remember me
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="form-row">
+              <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
+              <button type="submit" class="btn btn-primary btn-sm ml-1">Sign in</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
   <header class="jumbotron">
     <div class="container">
       <div class="row row-header">
@@ -53,7 +94,10 @@
           <img src="img/logo.png" alt="Logo" class="img-fluid" title="The logo of the restaurant">
         </div>
         <div class="col-sm-8 m-auto col-md-offset-0 col-md-4 align-self-center">
-          <a class="btn btn-lg btn-block btn-warning text-white" href="#form-reserve" role="button">Reserve a ticket</a>
+          <a class="btn btn-lg nav-link btn-block btn-warning text-white" data-toggle="tooltip" data-html="true"
+            title="Or Call us at  <br><strong>+852 12345678</strong>" data-placement="bottom" href="#form-reserve"
+            role="button">Reserve a
+            ticket</a>
         </div>
       </div>
     </div>
@@ -101,8 +145,8 @@
 
 
         <img src="./img/buffet.png" class="d-none d-sm-flex ml-3 img-responsive img-thumbnail align-self-center "
-          alt="Buffet" title="Buffet"/>
-      
+          alt="Buffet" title="Buffet" />
+
       </div>
     </div>
 
@@ -232,6 +276,11 @@
   <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
   <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
   <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $("[data-toggle='tooltip']").tooltip();
+    })
+  </script>
 </body>
 
 </html>
