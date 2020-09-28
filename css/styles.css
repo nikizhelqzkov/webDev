@@ -56,3 +56,11 @@ body {
   left: 0;
   min-height: 300px;
 }
+input[name="smoke"]{
+ appearance: none;
+ 
+}
+
+input:checked{
+  appearance:menulist-button;
+}
