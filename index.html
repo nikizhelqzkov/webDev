@@ -170,6 +170,16 @@
             <a class="carousel-control-next" href="#mycarousel" role="button" data-slide="next">
               <span class="carousel-control-next-icon"></span>
             </a>
+
+            <div class="btn-group" id="carouselButton">
+              <button class="btn btn-danger btn-sm" id="carousel-pause">
+                <span class="fa fa-pause"></span>
+              </button>
+              <button class="btn btn-danger btn-sm" id="carousel-play">
+                <span class="fa fa-play"></span>
+              </button>
+            </div>
+
           </div>
         </div>
       </div>
@@ -370,10 +380,12 @@
             </div>
             <div class="form-group row">
               <label for="smoke" class="col-form-label col-12 col-md-3">Section</label>
-              <div class="ml-3 btn btn-sm btn-success col-2"><input type="radio" class="btn btn-sm" name="smoke"
-                  id="smoker1" /><label class="form-check-inline" for="smoker1">NON-SMOKING</label></div>
-              <div class="col-3 btn btn-danger"><input type="radio" name="smoke" class="btn btn-sm"
-                  id="smoker2" /><label class="form-check-inline" for="smoker2">SMOKING</label></div>
+              <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                <label class="btn btn-success active" for="smoker1">
+                  <input type="radio" class="btn btn-sm" name="smoke" id="smoker1" checked />NON-SMOKING</label>
+                <label class="btn btn-danger" for="smoker2"><input type="radio" name="smoke" id="smoker2" />SMOKING
+                </label>
+              </div>
             </div>
             <div class="form-group row">
               <label for="date" class="col-form-label col-12 col-md-3 ">Date and time</label>
@@ -397,10 +409,28 @@
       </div>
     </div>
   </div>
+
+
+
+
+
+
   <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
+
   <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
   <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
   <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $("#mycarousel").carousel({ interval: 2000 });
+      $("#carousel-pause").click(function () {
+        $("#mycarousel").carousel('pause');
+      });
+      $("#carousel-play").click(function () {
+        $("#mycarousel").carousel('cycle');
+      });
+    });
+  </script>
 </body>
 
 </html>
