@@ -62,3 +62,6 @@ body {
   right: 0;
   z-index: 1;
 }
+#carouselButton .fa{
+  margin-right: 0;
+}
