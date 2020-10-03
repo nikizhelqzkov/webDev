@@ -66,4 +66,18 @@ body {
   bottom: 0px;
   z-index: 1;
 }
+
+.modal .modal-header {
+  background-color: #e463be;
+  color: floralwhite;
+}
+
+.modal .modal-body {
+  background-color: #ffb3cc;
+}
+
+#cancelLogin,
+#cancelReserve {
+  color: floralwhite;
+}
 /*# sourceMappingURL=styles.css.map */
