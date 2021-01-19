@@ -24,6 +24,9 @@
   },
   "homepage": "https://github.com/nikizhelqzkov/webDev#readme",
   "devDependencies": {
+    "browser-sync": "^2.23.6",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0",
     "lite-server": "^2.5.4",
     "node-sass": "4.7.2",
     "onchange": "^3.3.0",
